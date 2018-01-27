@@ -4,6 +4,7 @@ var element=document.querySelectorAll('a');
 var element1=document.getElementById('sources');
 var element2=document.getElementById('categories');
 
+
 element.forEach(e=>e.onclick=(event)=>{
     var target=event.target;
     console.log(target.innerText);
@@ -51,97 +52,98 @@ element.forEach(e=>e.onclick=(event)=>{
       processData1(url);
   }
 
-  if(response==='Sports'){
+  else if(response==='Sports'){
     url='https://newsapi.org/v2/top-headlines?' +
     'q=sports&'+
    'apiKey=bcd65385124749be9ab8d8df974b8ba1';
     processData1(url);
   }
 
-  if(response==='Technology'){
+  else if(response==='Technology'){
     url='https://newsapi.org/v2/top-headlines?' +
     'q=technology&'+
    'apiKey=bcd65385124749be9ab8d8df974b8ba1';;
     processData1(url);
   }
 
-  if(response==='Business'){
+  else if(response==='Business'){
     url='https://newsapi.org/v2/top-headlines?' +
     'q=business&'+
    'apiKey=bcd65385124749be9ab8d8df974b8ba1';;
     processData1(url);
   }
 
-  if(response==='Lifestyle'){
+  else if(response==='Lifestyle'){
     url='https://newsapi.org/v2/top-headlines?' +
     'q=lifestyle&'+
    'apiKey=bcd65385124749be9ab8d8df974b8ba1';;
     processData1(url);
   }
-  if(response==='Health'){
+ 
+  else if(response==='Health'){
     url='https://newsapi.org/v2/top-headlines?' +
     'q=health&'+
    'apiKey=bcd65385124749be9ab8d8df974b8ba1';;
     processData1(url);
   }
   
-  if(response==='Entertainment'){
+  else if(response==='Entertainment'){
     url='https://newsapi.org/v2/top-headlines?' +
     'q=entertainment&'+
    'apiKey=bcd65385124749be9ab8d8df974b8ba1';;
     processData1(url);
   }
 
-  if(response==='ABC NEWS'){
+  else if(response==='ABC NEWS'){
     url=  'https://newsapi.org/v2/top-headlines?' +
     'sources=abc-news&' +
     'apiKey=bcd65385124749be9ab8d8df974b8ba1';
     processData1(url);
   }
 
-  if(response==='BBC NEWS'){
+  else if(response==='BBC NEWS'){
     url='https://newsapi.org/v2/top-headlines?' +
     'sources=bbc-news&' +
     'apiKey=bcd65385124749be9ab8d8df974b8ba1';
     processData1(url);
   }
 
-  if(response==='BBC SPORTS'){
+  else if(response==='BBC SPORTS'){
     url='https://newsapi.org/v2/top-headlines?' +
     'sources=bbc-sport&' +
     'apiKey=bcd65385124749be9ab8d8df974b8ba1';
     processData1(url);
   }
 
-  if(response==='BUZZFEED'){
+  else if(response==='BUZZFEED'){
     url='https://newsapi.org/v2/top-headlines?' +
     'sources=buzzfeed&' +
     'apiKey=bcd65385124749be9ab8d8df974b8ba1';
     processData1(url);
   }
 
-  if(response==='ESPN'){
+  else if(response==='ESPN'){
     url='https://newsapi.org/v2/top-headlines?' +
     'sources=espn&' +
     'apiKey=bcd65385124749be9ab8d8df974b8ba1';
     processData1(url);
   }
 
-  if(response==='BUSINESS INSIDER'){
+  else if(response==='BUSINESS INSIDER'){
     url='https://newsapi.org/v2/top-headlines?' +
     'sources=business-insider&' +
     'apiKey=bcd65385124749be9ab8d8df974b8ba1';
     processData1(url);
   }
 
-  if(response==='CNBC'){
+  else if(response==='CNBC'){
     url='https://newsapi.org/v2/top-headlines?' +
     'sources=cnbc&' +
     'apiKey=bcd65385124749be9ab8d8df974b8ba1';
     processData1(url);
   }
 
-  if(response==='CNN'){
+  else if(response==='CNN'){
     url='https://newsapi.org/v2/top-headlines?' +
     'sources=cnn&' +
     'apiKey=bcd65385124749be9ab8d8df974b8ba1';
@@ -161,7 +163,8 @@ element.forEach(e=>e.onclick=(event)=>{
   });*/
   
   function processData(data) {
-   
+
+    document.querySelector('.column.middle').innerHTML="";
     var articleItems = [];
   
     for (var i = 0; i < data.articles.length; i++) {
@@ -185,8 +188,53 @@ element.forEach(e=>e.onclick=(event)=>{
  
   $(".column.middle").append($author, $title, $description);*/
 
-  document.querySelector('.column.middle').innerHTML=`<div class="column.middle">Author: ${author}  </div > <a href=${artUrl}><div class="column.middle">${title} </div ></a><a href=${artUrl} ><div class="column.middle">
-  ${description}</div ></a>`;
+  document.querySelector('.column.middle').innerHTML=`<h1><div class="column.middle">Author: ${author}  </div ></h1> <a href=${artUrl}><h3><div class="column.middle">${title} </div ></h3></a><div class="column.middle">${description}</div >`;
       console.log(artUrl);
     }
   }
+
+  function myfun()
+  {
+    console.log('inside search')
+    var search=document.getElementById('find').value;
+    console.log(search)
+    //console.log(checkedList)
+   /* var checkedList = document.querySelectorAll("input[name^='item[']:checked");
+    if (checkedList[0].nodevalue==='ABC NEWS') {
+      console.log(checkedList[0])
+    }
+    if (checkedList[1].nodevalue==='BBC NEWS') {
+      console.log(checkedList[1])
+    }
+    if (checkedList[2].nodevalue==='BBC SPORTS') {
+      console.log(checkedList[2])
+    }*/
+    
+    /*
+    var items = document.querySelectorAll('.chec');
+    alert(items)
+
+    if (items[0].checked) {
+      alert(items[0].value);
+    }
+    else if (items[1].checked) {
+      alert(items[1].value);
+    }
+    else if (true === items[2].checked) {
+      alert(items[2].value);
+    }*/
+    url=`https://newsapi.org/v2/top-headlines?q=${search}&apiKey=bcd65385124749be9ab8d8df974b8ba1`;
+    processData1(url);
+  }
+  var expanded = false;
+
+function showCheckboxes() {
+  var checkboxes = document.getElementById("checkboxes");
+  if (!expanded) {
+    checkboxes.style.display = "block";
+    expanded = true;
+  } else {
+    checkboxes.style.display = "none";
+    expanded = false;
+  }
+}
