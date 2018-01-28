@@ -84,11 +84,7 @@ element.forEach(e=>e.onclick=(event)=>{
    'apiKey=bcd65385124749be9ab8d8df974b8ba1';;
     processData1(url);
   }
-<<<<<<< HEAD
 
-=======
-
->>>>>>> ca0ffccfa84e1d8b34a175d7cc52babd410f7fb2
   if(response==='Entertainment'){
     url='https://newsapi.org/v2/top-headlines?' +
     'q=entertainment&'+
@@ -150,7 +146,6 @@ element.forEach(e=>e.onclick=(event)=>{
     'sources=cnn&' +
     'apiKey=bcd65385124749be9ab8d8df974b8ba1';
     processData1(url);
-<<<<<<< HEAD
   }
 }
  /* $.ajax({
@@ -195,49 +190,3 @@ element.forEach(e=>e.onclick=(event)=>{
       console.log(artUrl);
     }
   }
-=======
-  }
-}
- /* $.ajax({
-    url:
-      "https://newsapi.org/v1/articles?source=the-guardian-uk&sortBy=top&apiKey=8ab152ef58164a81ba8c667f2d8cc1de",
-    method: "GET",
-    error: function() {
-      console.log("sorry");
-    },
-    success: function(data) {
-      processData(data);
-    }
-  });*/
-
-  function processData(data) {
-
-    var articleItems = [];
-
-    for (var i = 0; i < data.articles.length; i++) {
-      var author = data.articles[i].author;
-      var title = data.articles[i].title;
-      var description = data.articles[i].description;
-      var artUrl = data.articles[i].url;
-
-    /*  var $author = $('<div class="column.middle">Author: ' + author + "</div >");
-      var $title = $(
-        "<a href=" + artUrl + '><div class="column.middle">' + title + "</div ></a>"
-      );
-      var $description = $(
-        "<a href=" +
-          artUrl +
-          '><div class="column.middle">' +
-          description +
-          "</div ></a>"
-      );
-  //$(".column.middle").append("");
-
-  $(".column.middle").append($author, $title, $description);*/
-
-  document.querySelector('.column.middle').innerHTML=`<div class="column.middle">Author: ${author}  </div > <a href=${artUrl}><div class="column.middle">${title} </div ></a><a href=${artUrl} ><div class="column.middle">
-  ${description}</div ></a>`;
-      console.log(artUrl);
-    }
-  }
->>>>>>> ca0ffccfa84e1d8b34a175d7cc52babd410f7fb2
