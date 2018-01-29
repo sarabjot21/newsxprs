@@ -2,149 +2,13 @@
     <head>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <style>
-            .header{
-                text-align: center;
-                font-size:40px;
-            }
-            
-           
-            a {
-                 float: left;
-                 color: whitesmoke;
-                 text-align:left;
-                 padding: 14px;
-                 text-decoration: none;
-                 font-size:20px;
-             }
-
-/* Change color on hover */
-             a:hover {
-                  background-color: #ddd;
-                  color: black
-             }
-
-/*top navigation bar*/
-             .topnav {
-                  background-color: #333;
-             }
-
-             .topnav ul li{
-            	   display:inline-block;   
-	         }
-
-             button{
-                 float:right;
-
-             }
-
-             
-             input{
-                 padding: 5px;
-                 width: 20%;
-                 font-size:16px;
-                 border:none;
-                 float: left;
-                 border-bottom:1px solid  rgb(26,24,28)
-             }
-
-             .row:after {
-                content: "";
-                display: table;
-                clear: both;
-             }
-              .column {
-                    float: left;
-                padding:10px;
-             }
-
-/* Left column */
-            .column.side {
-                width: 25%;
-            }
-
-            .column.side ul li{
-                display:flex; 
-            }
-/* Middle column */
-            .column.middle {
-                text-align: center;
-                width: 50%;
-                height: 100%;
-            }
-
-            .column.middle a{
-                color: black
-            }
-
-            .footer {
-                background-color: black;
-                padding: 10px;
-                text-align:center;
-            }
-
-            .multiselect {
-  width: 200px;
-}
-
-.selectBox {
-  position: relative;
-  float: right
-}
-
-.selectBox select {
-  width: 100%;
-  font-weight: bold;
-}
-
-.overSelect {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-}
-
-#checkboxes {
-  display: none;
-  border: 1px #dadada solid;
-}
-
-#checkboxes label {
-  display: block;
-}
-
-#checkboxes label:hover {
-  background-color: #1e90ff;
-}
-
-
-        </style>
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <link rel="stylesheet" href="style.css">
     </head>
     <body onload="onload1('Headlines')">
-        <div class="header">NEWSXPRS<input id="find" type="text" placeholder="Search your news" />
-          <form>
-            <div class="multiselect">
-                <div class="selectBox" onclick="showCheckboxes()">
-                  <select>
-                    <option>Select an option</option>
-                  </select>
-                  <div class="overSelect"></div>
-                </div>
-                <div id="checkboxes" class="chec">
-                  <label for="one">
-                    <input type="checkbox" id="one" />ABC NEWS</label>
-                  <label for="two">
-                    <input type="checkbox" id="two" />BBC NEWS</label>
-                  <label for="three">
-                    <input type="checkbox" id="three" />BBC SPORTS</label>
-                </div>
-          </fiorm>  
-  </div>
-            <button onclick="myfun()">FIND</button></div>
         
-        
+        <div class="header">NEWSXPRS</div>
+ 
         <div class="topnav">
                 <ul id="categories">
                         <li><a style= "padding:5px">Headlines</a></li>
@@ -154,9 +18,58 @@
                             <li><a style= "padding:5px">Lifestyle</a></li>
                             <li><a style= "padding:5px">Entertainment</a></li>
                             <li><a style= "padding:5px">Health</a></li>
-                            
+                            <li id="search"><input id="find" type="text" placeholder="Search your news" />
+                            <li><button id="search_button" onclick="myfun()">FIND</button></li>
+                            <li>
+                               <!-- <form>
+                                <div class="multiselect">
+                                    <div class="selectBox" onclick="showCheckboxes()">
+                                      <select>
+                                        <option>Select an option</option>
+                                      </select>
+                                      <div class="overSelect"></div>
+                                    </div>
+                                    <div id="checkboxes" class="chec">
+                                      <label for="one">
+                                        <input type="checkbox" id="one" />ABC NEWS</label>
+                                      <label for="two">
+                                        <input type="checkbox" id="two" />BBC NEWS</label>
+                                      <label for="three">
+                                        <input type="checkbox" id="three" />BBC SPORTS</label>
+                                    </div>
+                              </form>-->
+                              <div class="dropdown">
+                                <button class="dropbtn">DROPDOWN
+                                  <i class="fa fa-caret-down"></i>
+                                </button>
+                                <div class="dropdown-content">
+                                   <div class="selectBox" onclick="showCheckboxes()">
+                                      <select>
+                                        <option>Select an option</option>
+                                      </select>
+                                      <div class="overSelect"></div>
+                                    </div>
+                                    <div id="checkboxes" class="chec">
+                                      <label for="one">
+                                        <input type="checkbox" id="one" />ABC NEWS</label>
+                                      <label for="two">
+                                        <input type="checkbox" id="two" />BBC NEWS</label>
+                                      <label for="three">
+                                        <input type="checkbox" id="three" />BBC SPORTS</label>
+                                      <label for="four">
+                                        <input type="checkbox" id="four" />ESPN</label>
+                                      <label for="five">
+                                        <input type="checkbox" id="five" />BUSINESS INSIDER</label>
+                                      <label for="six">
+                                        <input type="checkbox" id="six" />BUZZFEED</label>
+                                      <label for="seven">
+                                        <input type="checkbox" id="seven" />CNBC</label>
+                                      <label for="eight">
+                                        <input type="checkbox" id="eight" />CNN</label>
+                                </div>
+                              </div>   
+                              </li>       
                 </ul>
-               <!-- <input id="find" type="text" placeholder="Search your news" />-->
         </div>
 
         
