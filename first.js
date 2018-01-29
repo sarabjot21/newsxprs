@@ -306,7 +306,7 @@ var total1=total;
       console.log(search)
       document.getElementById('find').value="";
       channelArray.forEach(e=>{
-        url=`https://newsapi.org/v2/top-headlines?sources=${e}&q=${search}&apiKey=bcd65385124749be9ab8d8df974b8ba1`;
+        url=`https://newsapi.org/v2/everything?sources=${e}&q=${search}&apiKey=bcd65385124749be9ab8d8df974b8ba1`;
         console.log(channelArray.length)
       processData1(url,search,e,channelArray.length);
       })
@@ -331,6 +331,6 @@ var total1=total;
       search=global;
     }
     total=0;
-    url=`https://newsapi.org/v2/top-headlines?q=${search}&apiKey=bcd65385124749be9ab8d8df974b8ba1`;
+    url=`https://newsapi.org/v2/everything?q=${search}&apiKey=bcd65385124749be9ab8d8df974b8ba1`;
     processData1(url,search);
   }
