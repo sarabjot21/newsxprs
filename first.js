@@ -301,6 +301,9 @@ var total1=total;
       alert("Please Select A Channel");
     }
     else{
+      console.log("before"+search.length);
+      search = search.trim();
+      console.log("after"+search.length);
       search= search.split(" ");
       search=search.join('-')
       console.log(search)
