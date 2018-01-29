@@ -51,35 +51,35 @@ function onload1(response){
   else if(response==='Technology'){
     url='https://newsapi.org/v2/top-headlines?' +
     'q=technology&'+
-   'apiKey=bcd65385124749be9ab8d8df974b8ba1';;
+   'apiKey=bcd65385124749be9ab8d8df974b8ba1';
     processData1(url,response);
   }
 
   else if(response==='Business'){
     url='https://newsapi.org/v2/top-headlines?' +
     'q=business&'+
-   'apiKey=bcd65385124749be9ab8d8df974b8ba1';;
+   'apiKey=bcd65385124749be9ab8d8df974b8ba1';
     processData1(url,response);
   }
 
-  else if(response==='Lifestyle'){
-    url='https://newsapi.org/v2/top-headlines?' +
-    'q=lifestyle&'+
-   'apiKey=bcd65385124749be9ab8d8df974b8ba1';;
+  else if(response==='Politics'){
+    url='https://newsapi.org/v2/everything?' +
+    'q=politics&' + 'sources=google-news&' +
+   'apiKey=bcd65385124749be9ab8d8df974b8ba1';
     processData1(url,response);
   }
  
   else if(response==='Health'){
     url='https://newsapi.org/v2/top-headlines?' +
     'q=health&'+
-   'apiKey=bcd65385124749be9ab8d8df974b8ba1';;
+   'apiKey=bcd65385124749be9ab8d8df974b8ba1';
     processData1(url,response);
   }
   
-  else if(response==='Entertainment'){
+  else if(response==='Economy'){
     url='https://newsapi.org/v2/top-headlines?' +
-    'q=entertainment&'+
-   'apiKey=bcd65385124749be9ab8d8df974b8ba1';;
+    'q=economy&'+
+   'apiKey=bcd65385124749be9ab8d8df974b8ba1';
     processData1(url,response);
   }
 
