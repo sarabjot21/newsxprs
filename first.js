@@ -1,3 +1,4 @@
+
 console.log('hello script')
 
 var element=document.querySelectorAll('a');
@@ -9,11 +10,12 @@ var counter=0;
 var total=0;
 var articleItems1=new Array();
 var flag=0;
-
+var global;
 
 element.forEach(e=>e.onclick=(event)=>{
     var target=event.target;
     console.log(target.innerText);
+    global=target.innerText;
     onload1(target.innerText);
 })
 
@@ -148,7 +150,7 @@ function processData(data,response,channel,length) {
   }
   articleItems.push(`<div><b>${response}</b></div><br>`)
   
-  if(data.totalResults==0&&flag==0&&length==1)
+  if(data.totalResults==0&&flag==0&&length==1||data.totalResults==0&&flag==0&&!length)
   {
     document.querySelector('.column.middle').innerHTML=`<button onclick="myfun1()">SEE MORE</button>`;
     flag++;
@@ -161,6 +163,7 @@ function processData(data,response,channel,length) {
   {
     alert('Search Keyword Not Found')
     onload1('Headlines');
+    flag=0
   }
   else{
     console.log(length)
@@ -221,6 +224,8 @@ var total1=total;
       else{
         document.querySelector('.column.middle').innerHTML=articleItems;
       }
+      search=""
+      flag=0;
   }
   }
   
@@ -322,6 +327,9 @@ var total1=total;
   }
 
   function myfun1(){
+    if(!search){
+      search=global;
+    }
     total=0;
     url=`https://newsapi.org/v2/top-headlines?q=${search}&apiKey=bcd65385124749be9ab8d8df974b8ba1`;
     processData1(url,search);
