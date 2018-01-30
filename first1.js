@@ -138,7 +138,7 @@ function processData(data,response,channel,length) {
         c++
       }
 
-    for (var i = 0; i < data.articles.length; i++) {
+    for(var i = 0; i < data.articles.length; i++) {
       var author = data.articles[i].author;
       var title = data.articles[i].title;
       var description = data.articles[i].description;
