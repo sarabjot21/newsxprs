@@ -42,13 +42,11 @@ input{
     content: "";
     display: table;
     clear: both;
-    height: 100%
     }
 
 .column {
     float: left;
     padding:10px;
-    height: 100%
     }
 
 .column.side {
@@ -62,7 +60,6 @@ input{
 .column.middle {
     text-align: center;
     width:60%;
-    height: 100%;
     }
 
 .column.middle a{
@@ -77,6 +74,10 @@ input{
     background-color: black;
     padding: 10px;
     text-align:center;
+    position: absolute;
+    width:100%;
+    right: 0;
+    left: 0;
     }
 
 .multiselect {
@@ -137,18 +138,7 @@ input{
     box-sizing: border-box;
     transition: all 0.15s;
 }
-/*::-webkit-input-placeholder { /* WebKit browsers */
-    /*color: white;
-}
-:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-   /* color: white;
-}
-::-moz-placeholder { /* Mozilla Firefox 19+ */
-   /* color: white;
-}
-:-ms-input-placeholder { /* Internet Explorer 10+ */
-   /* color: white;
-}*/
+
 #find:focus {
     background: rgb(64, 151, 119);
 }
