@@ -143,7 +143,10 @@ function processData(data,response,channel,length) {
       var title = data.articles[i].title;
       var description = data.articles[i].description;
       var artUrl = data.articles[i].url;
+      var image=data.articles[i].urlToImage;
       var $title =`<a href=${artUrl}>${title}</a><br>`;
+      var $image=`<img src=${image}></img>`
+
       articleItems.push($title);
       console.log(artUrl);
      }

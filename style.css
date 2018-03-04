@@ -138,18 +138,18 @@ input{
     box-sizing: border-box;
     transition: all 0.15s;
 }
-/*::-webkit-input-placeholder { /* WebKit browsers */
-    /*color: white;
+::-webkit-input-placeholder { /* WebKit browsers */
+    color: white;
 }
 :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-   /* color: white;
+   color: white;
 }
 ::-moz-placeholder { /* Mozilla Firefox 19+ */
-   /* color: white;
+   color: white;
 }
 :-ms-input-placeholder { /* Internet Explorer 10+ */
-   /* color: white;
-}*/
+    color: white;
+}
 #find:focus {
     background: rgb(64, 151, 119);
 }
