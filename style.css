@@ -30,6 +30,7 @@ button{
     }
 
 input{
+    color: white;
     padding: 5px;
     width: 20%;
     font-size:16px;
@@ -138,6 +139,7 @@ input{
     box-sizing: border-box;
     transition: all 0.15s;
 }
+<<<<<<< HEAD
 ::-webkit-input-placeholder { /* WebKit browsers */
     color: white;
 }
@@ -150,13 +152,16 @@ input{
 :-ms-input-placeholder { /* Internet Explorer 10+ */
     color: white;
 }
+=======
+
+>>>>>>> ee1437cdbab3c32af5a3617b634780527266ea55
 #find:focus {
     background: rgb(64, 151, 119);
 }
 #search_button {
     border: 0 none;
     background: #1f7f5c  center no-repeat;
-    width: 50px;
+    width: 60px;
     float: left;
     padding: 0;
     text-align: center;
@@ -214,3 +219,6 @@ input{
 .seeMore{
     float:left;
 }
+input::-webkit-input-placeholder {
+    color: white;
+    }

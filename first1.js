@@ -138,15 +138,23 @@ function processData(data,response,channel,length) {
         c++
       }
 
+<<<<<<< HEAD
     for (var i = 0; i < data.articles.length; i++) {
+=======
+    for(var i = 0; i < data.articles.length; i++) {
+>>>>>>> ee1437cdbab3c32af5a3617b634780527266ea55
       var author = data.articles[i].author;
       var title = data.articles[i].title;
       var description = data.articles[i].description;
       var artUrl = data.articles[i].url;
+<<<<<<< HEAD
       var image=data.articles[i].urlToImage;
       var $title =`<a href=${artUrl}>${title}</a><br>`;
       var $image=`<img src=${image}></img>`
 
+=======
+      var $title =`<a href=${artUrl}>${title}</a><br>`;
+>>>>>>> ee1437cdbab3c32af5a3617b634780527266ea55
       articleItems.push($title);
       console.log(artUrl);
      }
